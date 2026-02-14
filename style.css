@@ -1,0 +1,68 @@
+/* --------------------------------------------------------------------
+FONT
+-------------------------------------------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=SN+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+
+/* --------------------------------------------------------------------
+BODY
+-------------------------------------------------------------------- */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #DAB1DA;
+    font-family: 'SN Pro', sans-serif;
+    font-weight: 600;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+a:hover {
+    color: darkorchid;
+}
+
+/* --------------------------------------------------------------------
+NAVBAR
+-------------------------------------------------------------------- */
+.navbar {
+    box-shadow: 0 1px 7px #484948;
+}
+
+.nav-link:hover {
+    color: darkorchid;
+}
+
+.dropdown-item:hover {
+    background-color: darkorchid;
+    color: white;
+}
+
+
+/* --------------------------------------------------------------------
+PROJECTS
+-------------------------------------------------------------------- */
+.breadcrumb-nav {
+    margin: 20px;
+    background-color: white;
+    border-radius: 5px;
+    padding-left: 10px;
+    font-size: 0.9rem;
+}
+
+/* --------------------------------------------------------------------
+FOOTER
+-------------------------------------------------------------------- */
+footer {
+    background-color: white;
+    box-shadow: 0 1px 7px #484948;
+    position: sticky;
+    margin-top: 100px;
+}
