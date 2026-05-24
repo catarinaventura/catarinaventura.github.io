@@ -32,5 +32,15 @@ function typeWriter() {
 typeWriter();
 
 /* --------------------------------------------------------------------
-CURSOR GLOW ANIMATION
+LIGHTBOX
 -------------------------------------------------------------------- */
+document.querySelectorAll(".react-card").forEach((card) => {
+  const mainImg = card.querySelector(".main-preview");
+  const thumbs = card.querySelectorAll(".thumb");
+
+  thumbs.forEach((thumb) => {
+    thumb.addEventListener("click", () => {
+      mainImg.src = thumb.src;
+    });
+  });
+});
