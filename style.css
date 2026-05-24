@@ -1,180 +1,219 @@
 /* --------------------------------------------------------------------
 FONT
 -------------------------------------------------------------------- */
-@import url('https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,100..900;1,100..900&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,100..900;1,100..900&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 
 /* --------------------------------------------------------------------
 BODY
 -------------------------------------------------------------------- */
-*, *::before, *::after {
-    box-sizing: border-box;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-    background-color: #DAB1DA;
-    font-weight: 600;
-    font-family: 'PT Serif', sans-serif;
+  background-color: #dab1da;
+  font-weight: 600;
+  font-family: "PT Serif", sans-serif;
+  overflow-x: hidden;
 }
 
 h1 {
-    font-size: 2.5rem;
+  font-size: 2.5rem;
 }
 
 h2 {
-    font-size: 2rem;
+  font-size: 2rem;
 }
 
 h3 {
-    font-size: 1.2rem;
+  font-size: 1.2rem;
 }
 
 p {
-    font-size: 1rem;
-    font-family: 'Chivo', sans-serif;
+  font-size: 1rem;
+  font-family: "Chivo", sans-serif;
 }
 
 a {
-    color: black;
-    text-decoration: none;
+  color: black;
+  text-decoration: none;
 }
 
 a:hover {
-    color: darkorchid;
+  color: darkorchid;
 }
 
 /* --------------------------------------------------------------------
 NAVBAR
 -------------------------------------------------------------------- */
 .navbar {
-    box-shadow: 0 1px 7px #484948;
+  box-shadow: 0 1px 7px #484948;
 }
 
 .nav-link:hover {
-    color: darkorchid;
+  color: darkorchid;
 }
 
 .dropdown-item:hover {
-    background-color: darkorchid;
-    color: white;
+  background-color: darkorchid;
+  color: white;
 }
 
 /* --------------------------------------------------------------------
 SECTIONS
 -------------------------------------------------------------------- */
 .welcome-section {
-    background-color: rgba(250, 250, 250, 0.8);;
-    border-radius: 5px;
-    padding: 30px;
-    box-shadow: 0 1px 7px #484948;
+  background-color: rgba(250, 250, 250, 0.8);
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 1px 7px #484948;
 }
 
 .side-section {
-    background-color: white;
-    border-radius: 5px;
-    padding: 30px;
-    box-shadow: 0 1px 7px #484948;
+  background-color: white;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 1px 7px #484948;
 }
 
 .side-by-side-container {
-    gap: 30px;
+  gap: 30px;
 }
 
-.welcome-section, .side-section {
-    flex: 1 1 48%; /* grow/shrink and occupy ~half width */
-    min-width: 300px; /* ensures it doesn’t get too squished on mobile */
+.welcome-section,
+.side-section {
+  flex: 1 1 48%;
+  min-width: 300px;
 }
 
 .normal-section {
-    background-color: white;
-    border-radius: 5px;
-    padding: 30px;
-    box-shadow: 0 1px 7px #484948;
+  background-color: white;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 1px 7px #484948;
+}
+
+.hidden {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease;
+}
+
+.show {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* --------------------------------------------------------------------
 TITLES
 -------------------------------------------------------------------- */
 .box {
-    background-color: #484948;
-    color: white;
-    border-radius: 5px;
-    padding: 10px;
-    box-shadow: 0 1px 7px #484948;
-    margin-bottom: 30px;
+  background-color: #484948;
+  color: white;
+  border-radius: 20px;
+  padding: 10px;
+  box-shadow: 0 1px 7px #484948;
+  margin-bottom: 30px;
 }
 
 .small-box {
-    padding: 10px;
-    border: 1px solid #484948;
-    border-radius: 10px;
-    margin-bottom: 25px;
-    box-shadow: 0 1px 7px #484948;
+  padding: 10px;
+  border: 1px solid #484948;
+  border-radius: 20px;
+  margin-bottom: 25px;
+  box-shadow: 0 1px 7px #484948;
+  transition: 0.3s ease;
+}
+
+.small-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px rgba(153, 50, 204, 0.4);
 }
 
 .profile-pic-box {
-    display: flex;
-    justify-content: left;
-    align-items: left;
+  display: flex;
+  justify-content: left;
+  align-items: left;
 }
 
 .profile-pic {
-    max-height: 300px;
-    border-radius: 10px;
-    margin: 20px;
+  max-height: 300px;
+  border-radius: 10px;
+  margin: 20px;
+  animation: float 3s ease-in-out infinite;
+  box-shadow: 10px 10px 15px rgba(72, 73, 72, 0.5);
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
 }
 
 .welcome-box {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    align-items: center;
-    padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  padding: 20px;
 }
-
 
 /* --------------------------------------------------------------------
 TEXT HIGLIGHTS
 -------------------------------------------------------------------- */
 .highlight {
-    background-color: #ebd5eb;
+  background-color: #ebd5eb;
 }
 
 /* --------------------------------------------------------------------
 BUTTONS
 -------------------------------------------------------------------- */
 .btn {
-    background-color: gray;
-    color: white;
-    border-radius: 5px;
-    box-shadow: 0 1px 7px #484948;
-    margin: 10px;
+  background-color: gray;
+  color: white;
+  border-radius: 5px;
+  box-shadow: 0 1px 7px #484948;
+  margin: 10px;
 }
 
 .btn:hover {
-    background-color: #DAB1DA;
-    color: black;
-    box-shadow: 0 1px 7px #484948;
+  background-color: #dab1da;
+  color: black;
+  box-shadow: 0 1px 7px #484948;
 }
-
 
 /* --------------------------------------------------------------------
 PROJECTS
 -------------------------------------------------------------------- */
 .breadcrumb-nav {
-    margin: 20px;
-    background-color: white;
-    border-radius: 5px;
-    padding-left: 10px;
-    font-size: 0.9rem;
+  margin: 20px;
+  background-color: white;
+  border-radius: 5px;
+  padding-left: 10px;
+  font-size: 0.9rem;
 }
 
 /* --------------------------------------------------------------------
 FOOTER
 -------------------------------------------------------------------- */
 footer {
-    background-color: white;
-    box-shadow: 0 1px 7px #484948;
-    position: sticky;
-    margin-top: 100px;
+  background-color: white;
+  box-shadow: 0 1px 7px #484948;
+  position: sticky;
+  margin-top: 100px;
 }
