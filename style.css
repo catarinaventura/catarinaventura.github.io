@@ -40,7 +40,7 @@ p {
   font-family: "Chivo", sans-serif;
 }
 
-a {
+.link {
   position: relative;
   display: inline-block;
 
@@ -58,7 +58,7 @@ a {
 }
 
 /* SHIMMER */
-a::before {
+.link::before {
   content: "";
 
   position: absolute;
@@ -85,7 +85,7 @@ a::before {
 }
 
 /* UNDERLINE GLOW */
-a::after {
+.link::after {
   content: "";
   position: absolute;
 
@@ -102,7 +102,7 @@ a::after {
 }
 
 /* HOVER */
-a:hover {
+.link:hover {
   color: darkorchid;
   transform: translateY(-1px);
 
@@ -110,17 +110,17 @@ a:hover {
   letter-spacing: 0.5px;
 }
 
-a:hover::before {
+.link:hover::before {
   left: 120%;
   opacity: 1;
 }
 
-a:hover::after {
+.link:hover::after {
   width: 100%;
 }
 
 /* CLICK */
-a:active {
+.link:active {
   transform: scale(0.97);
 }
 
@@ -225,7 +225,7 @@ TITLES
   box-shadow: 10px 10px 15px rgba(72, 73, 72, 0.5);
 }
 
-.contact-box {
+.floating-box {
   display: flex;
   flex-direction: column;
   gap: 15px;
@@ -234,7 +234,8 @@ TITLES
   box-shadow: 10px 10px 15px rgba(72, 73, 72, 0.5);
   background-color: white;
   border: 1px solid #484948;
-  padding: 10px;
+  padding-top: 5px;
+  margin: 10px;
 }
 
 @keyframes float {
@@ -257,7 +258,6 @@ TITLES
   justify-content: center;
   text-align: center;
   align-items: center;
-  padding: 20px;
 }
 
 /* --------------------------------------------------------------------
@@ -433,38 +433,8 @@ PROJECT CAROUSEL
 }
 
 /* --------------------------------------------------------------------
-LIGHTBOX
--------------------------------------------------------------------- */
-.main-preview {
-  width: 100%;
-  border-radius: 12px;
-  margin-bottom: 10px;
-  box-shadow: 0 1px 7px #484948;
-}
-
-.thumbs {
-  display: flex;
-  gap: 8px;
-  flex-wrap: wrap;
-}
-
-.thumb {
-  width: 60px;
-  height: 60px;
-  object-fit: cover;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: 0.2s;
-}
-
-.thumb:hover {
-  transform: scale(1.05);
-}
-
-/* --------------------------------------------------------------------
 RESPONSIVE
 -------------------------------------------------------------------- */
-
 @media (max-width: 768px) {
   .project-header {
     flex-direction: column;
